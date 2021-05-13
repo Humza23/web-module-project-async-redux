@@ -3,26 +3,26 @@ import { connect } from 'react-redux'
 import {fetchTeam} from '../actions/index'
 
 const Team = (props) => {
-
+    const {dispatch} = props
     useEffect(() => {
-        props.dispatch(fetchTeam());
+        dispatch(fetchTeam());
       }, []);
 
     const handleClick = () => {
-        props.dispatch(fetchTeam())
+        dispatch(fetchTeam())
     }
 
     return (
         <div>
-            <h1>
+            <h1 style={{fontSize: '3rem'}}>
                 I am from: {props.teamInfo.city}
                 <br></br>
                 My favorite team is the: {props.teamInfo.name}
             </h1>
             <div>
-                <img style={{width: "25%"}} src='https://eyofbaku2019.com/images/sport%20pages/basketball.jpg' />
+                <img style={{width: "25%", borderRadius: '35%'}} src='https://eyofbaku2019.com/images/sport%20pages/basketball.jpg' alt='basketball'/>
             </div>
-            <button style={{backgroundColor: 'red', fontSize: '24px', borderRadius: '35%', padding: '15px', marginTop: '20px'}} onClick={handleClick}> Click to get a new team! </button>
+            <button style={{backgroundColor: 'red', fontSize: '24px', padding: '10px', marginTop: '20px', color: 'indigo'}} onClick={handleClick}> Click to get a new team! </button>
         </div>
     )
 }
