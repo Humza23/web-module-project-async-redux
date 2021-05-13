@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url('https://media.newyorker.com/photos/5f52608d704116b9739db5c9/master/pass/Thomas-NBAMLBStrikes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
