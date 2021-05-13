@@ -10,7 +10,6 @@ export const fetchTeam = () => {
 
         axios.get('https://www.balldontlie.io/api/v1/teams/')
         .then(res => {
-            // console.log(res.data.data[Math.floor(Math.random() * res.data.data.length)]);
             dispatch(fetchSuccess(res.data.data[Math.floor(Math.random() * res.data.data.length)]))
         })
         .catch(err => {
